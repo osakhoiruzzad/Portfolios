@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto Mono, monospace;
+}
+.roboto-mono-<uniquifier> {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #000;
+}
+
+header {
+    text-align: center;
+    font-size: 24px;
+    padding-top: 80px;
+    font-weight: 600;
+}
+
+nav {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.arts, .works {
+    color: #000;
+}
+.arts:hover, .works:hover {
+    color: #0b2a5a;
+}
+
+.contact {
+    color: red;
+    font-weight: 600;
+}
+.contact:hover {
+    color: #b59b00;
+}
+
+main {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== ARTS ===== */
+.art-wrapper {
+    display: flex;
+    gap: 40px;                 /* JARAK ANTAR KOLOM */
+    align-items: flex-start;
+}
+
+/* FOTO + CONTROLS */
+.art-viewer {
+    position: relative;        /* PARENT UNTUK ABSOLUTE */
+    width: 540px;
+    height: 675px;
+    flex-shrink: 0;
+}
+
+.art-viewer img {
+    width: 93%;
+    height: 93%;
+    object-fit: cover;
+}
+
+/* CONTROLS MENEMPEL KE FOTO */
+.art-controls {
+  position: absolute;
+  right: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.art-controls button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #222;
+
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.art-controls button:hover {
+  opacity: 1;
+}
+
+
+
+/* DESKRIPSI */
+.art-desc {
+    width: 260px;
+    height: 675px;             /* FIXED */
+    overflow-y: auto;          /* SCROLL TEKS */
+}
+
+.art-desc h3 {
+    margin-top: 0;
+}
+
+/* ===== WORKS ===== */
+.works-container {
+    display: flex;
+    gap: 40px;
+}
+
+.work-card {
+    width: 540px;
+    height: 675px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.img-logo{
+    width: 430px;
+    height: auto;
+}
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.7;
+    padding-bottom: 40px;
+}
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px 40px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    border-radius: 12px;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ===== CONTACT BUTTON ===== */
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #000;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #000;
+    transition: background 0.2s ease;
+}
+
+.contact-btn:hover {
+    background: #f2f2f2;
+}
+
+.contact-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0);
+}
+
+/* BUTTON NAV TAMPIL SEPERTI LINK */
+button.link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
