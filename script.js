@@ -64,15 +64,19 @@ function closeContact() {
 
 const artsData = [
   { image: "assets/art1.png", title: "Sanity", desc: "Desc" },
-  { image: "assets/art2.png", title: "Learn to Fly", desc: "Deskripsi artwork kedua." },
+  { image: "assets/art2.png", title: "Closer to Life", desc: "Deskripsi artwork kedua." },
   { image: "assets/art3.png", title: "Sta(i)rs", desc: "Deskripsi artwork ketiga." },
   { image: "assets/art4.png", title: "Kerzenschein", desc: "Desc" },
   { image: "assets/art5.png", title: "Ein Gebrochener Mensch.", desc: "Deskripsi artwork kelima." },
   { image: "assets/art6.png", title: "Oblivione", desc: "Desc" },
   { image: "assets/art7.png", title: "K_Night", desc: "Desc" },
   { image: "assets/art8.png", title: "Non-Senses", desc: "Deskripsi artwork kedelapan." },
-  { image: "assets/art9.png", title: "Nevertheless", desc: "Deskripsi artwork kesembilan." },
-  { image: "assets/art10.png", title: "Dethroned", desc: "Deskripsi artwork kesepuluh." }
+  { image: "assets/art9.png", title: "Hypocrites", desc: "Deskripsi artwork kesembilan." },
+  { image: "assets/art10.png", title: "Dethroned", desc: "Deskripsi artwork kesepuluh." },
+  { image: "assets/art11.png", title: "i hate me too", desc: "Desc" },
+  { image: "assets/art12.png", title: "alles hat seine zeit", desc: "Deskripsi artwork kedua." }
+  
+
 ];
 
 let artIndex = 0;

@@ -163,6 +163,7 @@ footer {
 .modal-content {
     background: #fff;
     padding: 30px 40px;
+    border: 1px solid #000;
     min-width: 260px;
     display: flex;
     flex-direction: column;
