@@ -18,10 +18,14 @@ body {
 header {
     text-align: center;
     font-size: 24px;
-    padding-top: 80px;
-    font-weight: 600;
+    padding-top: 30px;
 }
+.desc-header{
+    text-align: center;
+    padding: 0;
+    font-weight: 300;
 
+}
 nav {
     margin-top: 40px;
     display: flex;
@@ -33,13 +37,17 @@ nav {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
-}
 
+}
+.link.active{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
 .arts, .works {
     color: #000;
 }
 .arts:hover, .works:hover {
-    color: #0b2a5a;
+    font-weight: 600;
 }
 
 .contact {
@@ -47,7 +55,7 @@ nav {
     font-weight: 600;
 }
 .contact:hover {
-    color: #b59b00;
+    color: #ff8080;
 }
 
 main {
@@ -209,3 +217,4 @@ button.link {
     padding: 0;
     cursor: pointer;
 }
+
