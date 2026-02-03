@@ -1,3 +1,6 @@
+html{
+    font-size: 80%;
+}
 * {
     box-sizing: border-box;
     font-family: Roboto Mono, monospace;
@@ -17,7 +20,6 @@ body {
 
 header {
     text-align: center;
-    font-size: 24px;
     padding-top: 30px;
 }
 .desc-header{
@@ -35,7 +37,7 @@ nav {
 
 .link {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     transition: color 0.3s ease;
 
 }
@@ -77,12 +79,14 @@ main {
     width: 540px;
     height: 675px;
     flex-shrink: 0;
+    
 }
 
 .art-viewer img {
     width: 93%;
     height: 93%;
     object-fit: cover;
+    
 }
 
 /* CONTROLS MENEMPEL KE FOTO */
