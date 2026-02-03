@@ -14,13 +14,13 @@ html{
 
 body {
     margin: 0;
-    background: #fff;
+    background-image: url("assets/whitedots.png") ;
     color: #000;
 }
 
 header {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 .desc-header{
     text-align: center;
