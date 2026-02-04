@@ -78,18 +78,18 @@ function closeContact() {
 ================================ */
 
   const artsData = [
-    { image: "assets/art1.png", title: "Sanity", desc: "I was raised on a theory that was constantly drilled into me: “Being a good person will keep you away from life’s problems.” That sentence echoed in my mind for 25 years. And over the past five years, I’ve come to curse it." },
-    { image: "assets/art2.png", title: "Closer to Life", desc: "I thought my first experience with a panic attack was nothing more than a single unlucky day I had gone through. But, I was wrong. That one day shattered what little remained of the beginning of a life that had only just started." },
-    { image: "assets/art3.png", title: "Sta(i)rs", desc: "Have you ever imagined what it would be like if the door that leads you to eternity felt like a spinning warp, making you forget the life you once lived in this world?" },
-    { image: "assets/art4.png", title: "Kerzenschein", desc: "An eclipse is like a candle: its light is faint, small, and fragile, yet over time it will pierce your eyes and burn your lids." },
-    { image: "assets/art5.png", title: "Ein Gebrochener Mensch.", desc: "When a life once filled with joyful laughter, pleasure, and freedom from problems suddenly vanishes in a single day, it turns you into someone else—so much so that you even forget who you truly are." },
-    { image: "assets/art6.png", title: "Oblivione", desc: "And that problem throws you far away from reality, isolating a self that was once surrounded by noise and life, now feeling unbearably silent. How long will you endure?" },
-    { image: "assets/art7.png", title: "K_Night", desc: "All of the sudden, when you thought that life is all about your own problems, there comes a second wave of threatens. Not from yourself, but your closest people." },
-    { image: "assets/art8.png", title: "Non-Senses", desc: "And now you're thinking. 'I don't wanna do this anymore.' But that exactly how life actually works." },
-    { image: "assets/art9.png", title: "Hypocrites", desc: "People who speak up for their rights are silenced by a handful of humans who see themselves as gods. Two hundred eighty-seven million lives are shattered by the decisions of only a few thousand people. What if we finally stood together and refused to bow to them any longer?" },
-    { image: "assets/art10.png", title: "Dethroned", desc: "And the people closest to you turn out to be part of those who flatter their superiors. They look proud of what they have gained. You watch them with cynicism and feel the injustice, yet you also realize that this is what real life truly is." },
-    { image: "assets/art11.png", title: "mother's light", desc: "Mom keeps me alive even tho my mental health is getting worse. I just want you to know that I love you."},
-    { image: "assets/art12.png", title: "alles hat seine zeit", desc: "The moment I realized, that everything has it's timeline. I feel more anxious yet relieved." }
+    { image: "assets/art1.jpg", title: "Sanity", desc: "I was raised on a theory that was constantly drilled into me: “Being a good person will keep you away from life’s problems.” That sentence echoed in my mind for 25 years. And over the past five years, I’ve come to curse it." },
+    { image: "assets/art2.jpg", title: "Closer to Life", desc: "I thought my first experience with a panic attack was nothing more than a single unlucky day I had gone through. But, I was wrong. That one day shattered what little remained of the beginning of a life that had only just started." },
+    { image: "assets/art3.jpg", title: "Sta(i)rs", desc: "Have you ever imagined what it would be like if the door that leads you to eternity felt like a spinning warp, making you forget the life you once lived in this world?" },
+    { image: "assets/art4.jpg", title: "Kerzenschein", desc: "An eclipse is like a candle: its light is faint, small, and fragile, yet over time it will pierce your eyes and burn your lids." },
+    { image: "assets/art5.jpg", title: "Ein Gebrochener Mensch.", desc: "When a life once filled with joyful laughter, pleasure, and freedom from problems suddenly vanishes in a single day, it turns you into someone else—so much so that you even forget who you truly are." },
+    { image: "assets/art6.jpg", title: "Oblivione", desc: "And that problem throws you far away from reality, isolating a self that was once surrounded by noise and life, now feeling unbearably silent. How long will you endure?" },
+    { image: "assets/art7.jpg", title: "K_Night", desc: "All of the sudden, when you thought that life is all about your own problems, there comes a second wave of threatens. Not from yourself, but your closest people." },
+    { image: "assets/art8.jpg", title: "Non-Senses", desc: "And now you're thinking. 'I don't wanna do this anymore.' But that exactly how life actually works." },
+    { image: "assets/art9.jpg", title: "Hypocrites", desc: "People who speak up for their rights are silenced by a handful of humans who see themselves as gods. Two hundred eighty-seven million lives are shattered by the decisions of only a few thousand people. What if we finally stood together and refused to bow to them any longer?" },
+    { image: "assets/art10.jpg", title: "Dethroned", desc: "And the people closest to you turn out to be part of those who flatter their superiors. They look proud of what they have gained. You watch them with cynicism and feel the injustice, yet you also realize that this is what real life truly is." },
+    { image: "assets/art11.jpg", title: "mother's light", desc: "Mom keeps me alive even tho my mental health is getting worse. I just want you to know that I love you."},
+    { image: "assets/art12.jpg", title: "alles hat seine zeit", desc: "The moment I realized, that everything has it's timeline. I feel more anxious yet relieved." }
   ];
 
   let artIndex = 0;
