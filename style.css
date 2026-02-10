@@ -13,7 +13,7 @@ html {
 
 body {
   margin: 0;
-  background-image: url("assets/whitedots.png");
+  /*background-image: url("assets/whitedots.png");*/
   color: #000;
 }
 
@@ -78,8 +78,11 @@ header {
 }
 
 .img-logo {
-  width: 430px;
+   width: 100%;
+  max-width: 430px;  /* batas maksimal di desktop */
   height: auto;
+  display: block;
+  margin: 0 auto; 
 }
 
 .desc-header {
@@ -417,7 +420,7 @@ footer {
   .art-controls {
     position: static;       /* hilangkan absolute */
     transform: none;
-    margin-top: 12px;
+    margin-top: 14px;
     flex-direction: row;     /* tombol horizontal */
     justify-content: center;
     gap: 14px;
