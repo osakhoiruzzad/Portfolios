@@ -147,13 +147,17 @@ main {
   display: flex;
   gap: 40px;
   align-items: flex-start;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 /* IMAGE FRAME */
 .art-viewer {
   position: relative;
-  width: 540px;
-  height: 675px;
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 4 / 5; /* ganti height fixed */
   flex-shrink: 0;
   border: 1px solid #000;
   padding: 12px;
@@ -181,38 +185,41 @@ main {
 .art-controls button {
   background: none;
   border: 1px solid #000;
-  padding: 4px 8px;
+  padding: 4px 10px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 1px;
+  font-family: "Roboto Mono", monospace;
   color: #000;
-  opacity: 0.75;
+  opacity: 0.8;
   transition: all 0.2s ease;
 }
 
 .art-controls button:hover {
-  opacity: 1;
   background: #000;
   color: #fff;
+  opacity: 1;
 }
 
 /* DESCRIPTION PANEL */
 .art-desc {
-  width: 260px;
-  height: 675px;
+  width: 100%;
+  max-width: 280px;
   border: 1px solid #000;
   padding: 18px;
   background: #fff;
-  overflow-y: auto;
   font-size: 12px;
   line-height: 1.6;
 }
 
 .art-desc h3 {
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 1px;
-  margin: 0 0 6px;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #000;
 }
+
 
 /* EDITORIAL LINE */
 .mono-line {
@@ -393,3 +400,24 @@ footer {
   opacity: 0.7;
   padding-bottom: 40px;
 }
+
+@media (max-width: 768px) {
+  .art-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .art-controls {
+    right: 8px;
+    top: auto;
+    bottom: 8px;
+    transform: none;
+    flex-direction: row;
+  }
+
+  .art-desc {
+    max-width: 100%;
+  }
+}
+
