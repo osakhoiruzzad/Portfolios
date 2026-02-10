@@ -404,20 +404,31 @@ footer {
 @media (max-width: 768px) {
   .art-wrapper {
     flex-direction: column;
-    gap: 20px;
     align-items: center;
   }
 
+  /* FOTO FULL WIDTH DI HP */
+  .art-viewer {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* PINDAHKAN CONTROL KE BAWAH FOTO */
   .art-controls {
-    right: 8px;
-    top: auto;
-    bottom: 8px;
+    position: static;       /* hilangkan absolute */
     transform: none;
-    flex-direction: row;
+    margin-top: 12px;
+    flex-direction: row;     /* tombol horizontal */
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .art-controls button {
+    font-size: 13px;
+    padding: 6px 14px;
   }
 
   .art-desc {
     max-width: 100%;
   }
 }
-
