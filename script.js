@@ -130,15 +130,92 @@ function initArtGallery() {
 }
 
 /* ===============================
+   OPENING TYPEWRITER
+================================ */
+
+function runOpening() {
+  const opening = document.getElementById("opening");
+  const textEl = document.getElementById("opening-text");
+
+  // hanya tampil sekali (pakai sessionStorage)
+  if (sessionStorage.getItem("opened")) {
+    opening.style.display = "none";
+    return;
+  }
+
+  const text = "Initializing Portfolio...";
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      textEl.textContent += text[i];
+      i++;
+      setTimeout(type, 60); // kecepatan ketik
+    } else {
+      setTimeout(() => {
+        opening.classList.add("fade-out");
+        sessionStorage.setItem("opened", "true");
+
+        setTimeout(() => {
+          opening.style.display = "none";
+        }, 1000);
+      }, 600);
+    }
+  }
+
+  type();
+}
+
+/* ===============================
+   OPENING TYPEWRITER
+================================ */
+
+function runOpening() {
+  const opening = document.getElementById("opening");
+  const textEl = document.getElementById("opening-text");
+
+  // hanya tampil sekali (pakai sessionStorage)
+  if (sessionStorage.getItem("opened")) {
+    opening.style.display = "none";
+    return;
+  }
+
+  const text = "Initializing Portfolio...";
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      textEl.textContent += text[i];
+      i++;
+      setTimeout(type, 60); // kecepatan ketik
+    } else {
+      setTimeout(() => {
+        opening.classList.add("fade-out");
+        sessionStorage.setItem("opened", "true");
+
+        setTimeout(() => {
+          opening.style.display = "none";
+        }, 1000);
+      }, 600);
+    }
+  }
+
+  type();
+}
+
+
+/* ===============================
    BOOTSTRAP
 ================================ */
 
 window.addEventListener("hashchange", loadPage);
 
 document.addEventListener("DOMContentLoaded", () => {
+  runOpening();
   initContactModal();
   loadPage();
 });
+
 
 
 
