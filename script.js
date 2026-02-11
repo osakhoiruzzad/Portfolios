@@ -1,8 +1,9 @@
 "use strict";
 
-/* ===============================
-   SIMPLE HASH ROUTER
-================================ */
+console.log("SCRIPT.JS LOADED");
+
+
+/* HASH ROUTER */
 
 const allowedPages = ["arts", "works"];
 const content = document.getElementById("content");
@@ -15,23 +16,30 @@ function loadPage() {
     page = "arts";
   }
 
-  fetch(`pages/${page}.html`)
-    .then(res => {
-      if (!res.ok) throw new Error("Page not found");
-      return res.text();
-    })
-    .then(html => {
-      content.innerHTML = html;
+  links.forEach(l => l.classList.remove("active"));
+  const activeLink = document.querySelector(`.link.${page}`);
+  if (activeLink) activeLink.classList.add("active");
 
-      // init per halaman
-      if (page === "arts") {
-        initArtGallery();
-      }
-    })
-    .catch(() => {
-      content.innerHTML = "<p>Page not found.</p>";
-    });
+  // fade out content
+  content.classList.add("fade-out");
+
+  setTimeout(() => {
+    fetch(`pages/${page}.html`)
+      .then(res => {
+        if (!res.ok) throw new Error("Page not found");
+        return res.text();
+      })
+      .then(html => {
+        content.innerHTML = html;
+
+        // init per halaman
+        if (page === "arts") {
+          initArtGallery();
+        }
+      })
+  });
 }
+
 
 const links = document.querySelectorAll(".link");
 
@@ -47,9 +55,7 @@ links.forEach(link => {
   });
 });
 
-/* ===============================
-   CONTACT MODAL
-================================ */
+/* CONTACT MODAL */
 
 function initContactModal() {
   const modal = document.getElementById("contactModal");
@@ -73,9 +79,7 @@ function closeContact() {
   if (modal) modal.style.display = "none";
 }
 
-/* ===============================
-   ART GALLERY (ARTS PAGE)
-================================ */
+/* ART GALLERY (ARTS PAGE) */
 
   const artsData = [
     { image: "assets/art1.jpg", title: "Sanity", desc: "I was raised on a theory that was constantly drilled into me: “Being a good person will keep you away from life’s problems.” That sentence echoed in my mind for 25 years. And over the past five years, I’ve come to curse it." },
@@ -129,46 +133,7 @@ function initArtGallery() {
   updateArt();
 }
 
-/* ===============================
-   OPENING TYPEWRITER
-================================ */
-
-function runOpening() {
-  const opening = document.getElementById("opening");
-  const textEl = document.getElementById("opening-text");
-
-  // hanya tampil sekali (pakai sessionStorage)
-  if (sessionStorage.getItem("opened")) {
-    opening.style.display = "none";
-    return;
-  }
-
-  const text = "Initializing Portfolio...";
-  let i = 0;
-
-  function type() {
-    if (i < text.length) {
-      textEl.textContent += text[i];
-      i++;
-      setTimeout(type, 60); // kecepatan ketik
-    } else {
-      setTimeout(() => {
-        opening.classList.add("fade-out");
-        sessionStorage.setItem("opened", "true");
-
-        setTimeout(() => {
-          opening.style.display = "none";
-        }, 1000);
-      }, 600);
-    }
-  }
-
-  type();
-}
-
-/* ===============================
-   OPENING TYPEWRITER
-================================ */
+/*OPENING TYPEWRITER*/
 
 function runOpening() {
   const opening = document.getElementById("opening");
@@ -204,9 +169,7 @@ function runOpening() {
 }
 
 
-/* ===============================
-   BOOTSTRAP
-================================ */
+/* BOOTSTRAP */
 
 window.addEventListener("hashchange", loadPage);
 
