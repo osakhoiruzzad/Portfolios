@@ -9,7 +9,6 @@ html {
 
 body {
   margin: 0;
-  /*background-image: url("assets/whitedots.png");*/
   color: #000;
 }
 
@@ -60,7 +59,7 @@ body {
   opacity: 1;
 }
 
-/*HEADER & NAVIGATION*/
+/* HEADER & NAVIGATION */
 
 header {
   text-align: center;
@@ -68,11 +67,11 @@ header {
 }
 
 .img-logo {
-   width: 100%;
-  max-width: 430px;  
+  width: 100%;
+  max-width: 430px;
   height: auto;
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .desc-header {
@@ -122,31 +121,30 @@ button.link {
   color: #ff8080;
 }
 
-/* MAIN LAYOUT*/
+/* MAIN */
 
 main {
   margin-top: 60px;
   width: 100%;
 }
 
-/*ARTS SECTION (MONOSPACE STYLE)*/
+/* ARTS SECTION */
 
 .art-wrapper {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  max-width: 1100px;   /* batas lebar layout */
+  max-width: 1100px;
   width: fit-content;
-  margin: 0 auto;      /* CENTER HORIZONTAL */
+  margin: 0 auto;
   padding: 0 20px;
 }
 
-/* IMAGE FRAME */
 .art-viewer {
   position: relative;
   width: 100%;
   max-width: 540px;
-  aspect-ratio: 4 / 5; /* ganti height fixed */
+  aspect-ratio: 4 / 5;
   flex-shrink: 0;
   border: 1px solid #000;
   padding: 12px;
@@ -160,7 +158,6 @@ main {
   border: 1px solid #000;
 }
 
-/* CONTROLS */
 .art-controls {
   position: absolute;
   right: -42px;
@@ -178,7 +175,6 @@ main {
   cursor: pointer;
   font-size: 12px;
   letter-spacing: 1px;
-  font-family: "Roboto Mono", monospace;
   color: #000;
   opacity: 0.8;
   transition: all 0.2s ease;
@@ -190,7 +186,6 @@ main {
   opacity: 1;
 }
 
-/* DESCRIPTION PANEL */
 .art-desc {
   width: 100%;
   max-width: 280px;
@@ -209,8 +204,6 @@ main {
   border-bottom: 1px solid #000;
 }
 
-
-/* EDITORIAL LINE */
 .mono-line {
   width: 40px;
   height: 1px;
@@ -218,7 +211,7 @@ main {
   margin-bottom: 12px;
 }
 
-/*WORKS SECTION*/
+/* WORKS SECTION */
 
 .works-grid {
   display: grid;
@@ -229,7 +222,6 @@ main {
   margin: 0 auto;
 }
 
-/* CARD */
 .work-card {
   border: 1px solid #000;
   padding: 22px;
@@ -246,7 +238,6 @@ main {
   box-shadow: 5px 5px 0 #000;
 }
 
-/* IMAGE */
 .work-image {
   width: 100%;
   height: 260px;
@@ -263,7 +254,6 @@ main {
   border: 1px solid #000;
 }
 
-/* TEXT */
 .work-title {
   margin: 6px 0 4px;
   font-size: 15px;
@@ -279,7 +269,6 @@ main {
   margin: 6px 0 16px;
 }
 
-/* BUTTON */
 .work-btn {
   margin-top: auto;
   padding: 8px 18px;
@@ -296,26 +285,7 @@ main {
   color: #000;
 }
 
-/* RESPONSIVE WORKS */
-@media (max-width: 900px) {
-  .works-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .work-card {
-    min-height: auto;
-  }
-
-  .work-image {
-    height: auto;
-  }
-
-  .work-image img {
-    height: auto;
-  }
-}
-
-/* MODAL (CONTACT)*/
+/* MODAL */
 
 .modal {
   display: none;
@@ -346,7 +316,6 @@ main {
   font-size: 18px;
 }
 
-/* CONTACT BUTTON */
 .contact-btn {
   display: flex;
   align-items: center;
@@ -384,6 +353,22 @@ footer {
   padding-bottom: 40px;
 }
 
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    min-height: auto;
+  }
+
+  .work-image,
+  .work-image img {
+    height: auto;
+  }
+}
 
 @media (max-width: 768px) {
   .art-wrapper {
@@ -391,18 +376,16 @@ footer {
     align-items: center;
   }
 
-  /* FOTO FULL WIDTH DI HP */
   .art-viewer {
     max-width: 100%;
     width: 100%;
   }
 
-  /* PINDAHKAN CONTROL KE BAWAH FOTO */
   .art-controls {
-    position: static;       
+    position: static;
     transform: none;
     margin-top: 14px;
-    flex-direction: row;     
+    flex-direction: row;
     justify-content: center;
     gap: 14px;
   }
@@ -415,7 +398,4 @@ footer {
   .art-desc {
     max-width: 100%;
   }
-  
 }
-
-
